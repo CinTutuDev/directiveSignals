@@ -1,13 +1,14 @@
 <h1>Agregar producto</h1>
 <hr />
 
-<form action="">
+<form action="" [formGroup]="myForm">
   <div class="row g-3 align-items-center mb-3">
     <div class="col-auto">
       <label for="">Nombre</label>
     </div>
     <div class="col-auto">
-      <input type="text" name="" id="" class="form-control" />
+      <input formControlName="name" type="text" name="" id="" class="form-control" />
+
     </div>
     <div class="col-auto">
       <span>Infomacion</span>
@@ -19,3 +20,5 @@
     </div>
   </div>
 </form>
+
+<pre class="mt-5">{{ myForm.get("name")?.errors | json }}</pre>
