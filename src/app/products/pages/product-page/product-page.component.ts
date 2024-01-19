@@ -7,7 +7,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class ProductPageComponent {
   private formB = inject(FormBuilder);
-
+  color: string = 'green';
   public myForm: FormGroup = this.formB.group({
     name: [
       '',
@@ -17,4 +17,10 @@ export class ProductPageComponent {
     country: ['', [Validators.required]],
     borders: ['', [Validators.required]], */
   });
+
+  changeColor() {
+    this.color = '#xxxxxx'.replace(/x/g, (y) =>
+      ((Math.random() * 16) | 0).toString(16)
+    );
+  }
 }
