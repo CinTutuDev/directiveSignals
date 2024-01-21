@@ -17,7 +17,13 @@
     </div>
     <div class="col-auto">
       <!-- Directiva Personalizada -->
-      <span customLabel [color]="color" class="fs-3 fw-bolder">Temporal</span>
+      <span
+        customLabel
+        [color]="color"
+        [errors]="myForm.get('name')?.errors"
+        class="fs-3 fw-bolder"
+        >Temporal</span
+      >
     </div>
   </div>
   <div class="row">
