@@ -1,0 +1,10 @@
+<ul class="list-group">
+  <li
+    *ngFor="let item of mennuItems"
+    class="list-group-item"
+    routerLinkActive="active"
+    [routerLink]="[item.router]"
+  >
+    {{ item.title }}
+  </li>
+</ul>
