@@ -1,6 +1,6 @@
 <ul class="list-group">
   <li
-    *ngFor="let item of mennuItems"
+    *ngFor="let item of menuItems()"
     class="list-group-item"
     routerLinkActive="active"
     [routerLink]="[item.router]"
@@ -8,3 +8,5 @@
     {{ item.title }}
   </li>
 </ul>
+
+<!-- {{menuItems()}} -->

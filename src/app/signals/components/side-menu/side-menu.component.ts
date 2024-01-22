@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 
 interface MenuItems {
   title: string;
@@ -11,9 +11,14 @@ interface MenuItems {
   styleUrls: ['./side-menu.component.scss'],
 })
 export class SideMenuComponent {
-  public mennuItems: MenuItems[] = [
+  public menuItems = signal<MenuItems[]>([
+    { title: ' Contador', router: 'counter' },
+    { title: ' Usuarios', router: 'user-info' },
+    { title: ' Actualizaciones', router: 'properties' },
+  ]);
+  /*   public mennuItems: MenuItems[] = [
     { title: ' Contador', router: 'Counter' },
     { title: ' Usuarios', router: 'user-info' },
     { title: ' Actualizaciones', router: 'properties' },
-  ];
+  ]; */
 }
