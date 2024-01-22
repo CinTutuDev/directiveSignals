@@ -9,6 +9,7 @@
       type="text"
       class="form-control"
       (input)="onFieldUpdated('email', txtEmail.value)"
+      [value]="user().email"
       placeholder="email"
       aria-label="Username"
       aria-describedby="addon-wrapping"
@@ -22,6 +23,7 @@
       type="text"
       class="form-control"
       (input)="onFieldUpdated('first_name', txtFirstName.value)"
+      [value]="user().first_name"
       placeholder="First Name"
       aria-label="Username"
       aria-describedby="addon-wrapping"
@@ -35,12 +37,14 @@
       type="text"
       class="form-control"
       (input)="onFieldUpdated('last_name', txtLastName.value)"
+      [value]="user().last_name"
       placeholder="Last Name"
       aria-label="Username"
       aria-describedby="addon-wrapping"
     />
   </div>
   <div class="col-6">
-    <pre>{{'asss'}}</pre>
+    <pre>{{ user() | json }}</pre>
+    {{ fullName() }}
   </div>
 </div>
