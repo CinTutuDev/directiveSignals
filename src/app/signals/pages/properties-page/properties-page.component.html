@@ -1,1 +1,46 @@
-<p>properties-page works!</p>
+<h1>Mutaciones</h1>
+<hr />
+
+<div class="row">
+  <div class="col-4 input-group flex-nowrap mb-2">
+    <span class="input-group-text" id="addon-wrapping">📬 </span>
+    <input
+      #txtEmail
+      type="text"
+      class="form-control"
+      (input)="onFieldUpdated('email', txtEmail.value)"
+      placeholder="email"
+      aria-label="Username"
+      aria-describedby="addon-wrapping"
+    />
+  </div>
+
+  <div class="col-4 input-group flex-nowrap mb-2">
+    <span class="input-group-text" id="addon-wrapping"> 🌟</span>
+    <input
+      #txtFirstName
+      type="text"
+      class="form-control"
+      (input)="onFieldUpdated('first_name', txtFirstName.value)"
+      placeholder="First Name"
+      aria-label="Username"
+      aria-describedby="addon-wrapping"
+    />
+  </div>
+
+  <div class="col-4 input-group flex-nowrap">
+    <span class="input-group-text" id="addon-wrapping"> 🌟</span>
+    <input
+      #txtLastName
+      type="text"
+      class="form-control"
+      (input)="onFieldUpdated('last_name', txtLastName.value)"
+      placeholder="Last Name"
+      aria-label="Username"
+      aria-describedby="addon-wrapping"
+    />
+  </div>
+  <div class="col-6">
+    <pre>{{'asss'}}</pre>
+  </div>
+</div>
